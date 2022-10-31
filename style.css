@@ -25,7 +25,7 @@ body {
   .block-details {
     text-align: center;
   }
-  
+
 }
 
 .main {
@@ -61,7 +61,9 @@ button {
   outline: none;
 }
 
-button {
+.edit,
+.delete,
+.add{
   background: none;
   border: 0px;
   color: #888;
@@ -71,7 +73,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.edit:hover,
+.delete:hover,
+.add:hover {
   color: #3a3A3a;
 }
 
