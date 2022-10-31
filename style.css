@@ -134,8 +134,8 @@ button {
   vertical-align: middle;
 }
 
-.standart-mode>input[type = "checkbox"],
-.edit-mode>input[type = "checkbox"] {
+.standart-mode.check-complete,
+.edit-mode.check-complete {
   margin: 0 10px;
 }
 

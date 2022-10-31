@@ -21,6 +21,7 @@ var createNewTaskElement = function (taskString) {
   listItem.classList.add("standart-mode");
   //input (checkbox)
   var checkBox = document.createElement("input");//checkbx
+  checkBox.classList.add("check-complete")
   //label
   var label = document.createElement("label");//label
   //input (text)
