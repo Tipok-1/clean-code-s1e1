@@ -52,7 +52,7 @@ body {
 
 .standart-mode,
 .edit-mode,
-.title-section{
+.title-section {
   list-style: none;
 }
 
@@ -63,7 +63,7 @@ button {
 
 .edit,
 .delete,
-.add{
+.add {
   background: none;
   border: 0px;
   color: #888;
