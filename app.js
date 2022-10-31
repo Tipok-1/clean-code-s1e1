@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput = document.getElementById("new-task");//Add a new task.
-var addButton = document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder = document.getElementById("task-list");//ul of #task-list
-var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
+var taskInput = document.querySelector(".new-task");//Add a new task.
+var addButton = document.getElementsByClassName("add")[0];//first button
+var incompleteTaskHolder = document.querySelector(".task-list");//ul of #task-list
+var completedTasksHolder = document.querySelector(".completed-tasks");//completed-tasks
 
 
 //New task list item
@@ -32,6 +32,7 @@ var createNewTaskElement = function (taskString) {
   //button.delete
   var deleteButton = document.createElement("button");//delete button
   var deleteButtonImg = document.createElement("img");//delete button image
+  deleteButtonImg.classList.add("remove_img");
   
   label.innerText = taskString;
   label.className = 'task';
@@ -48,7 +49,6 @@ var createNewTaskElement = function (taskString) {
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
   
-  
   //and appending.
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
@@ -57,8 +57,6 @@ var createNewTaskElement = function (taskString) {
   listItem.appendChild(deleteButton);
   return listItem;
 }
-
-
 
 var addTask = function () {
   console.log("Add Task...");
@@ -174,17 +172,11 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
   bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
 
-
-
-
 //cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
-
-
-
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
