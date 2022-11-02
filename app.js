@@ -49,7 +49,6 @@ var createNewTaskElement = function (taskString) {
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
   
-  
   //and appending.
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
@@ -58,8 +57,6 @@ var createNewTaskElement = function (taskString) {
   listItem.appendChild(deleteButton);
   return listItem;
 }
-
-
 
 var addTask = function () {
   console.log("Add Task...");
@@ -175,17 +172,11 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
   bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
 
-
-
-
 //cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
-
-
-
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
